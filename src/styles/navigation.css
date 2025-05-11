@@ -20,6 +20,10 @@
 }
 
 .navbar-close {
+  display: none;
+}
+
+.navbar-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -73,6 +77,10 @@
 /* MOBILE STYLES */
 @media (max-width: 768px) {
   .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-close {
     display: block;
   }
 
