@@ -8,7 +8,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">DNF</Link>
+        <Link to="/">Dansk Negroni Forening</Link>
         <button
           className="navbar-toggle"
           onClick={() => setOpen(!open)}
