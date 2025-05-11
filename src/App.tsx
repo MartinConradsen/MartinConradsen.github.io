@@ -1,13 +1,18 @@
 import React from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div>
-      <h1>Danish Negroni Society</h1>
-      <p>We are a group of enthusiasts dedicated to the perfect balance of gin, vermouth, and Campari.</p>
-    </div>
+    <><Navigation />
+    <main className="container">
+      <Header title="Dansk Negroni Forening" tagline="In Campari we trust." />
+      <About />
+      <Footer />
+    </main></>
   );
 }
 
 export default App;
-
