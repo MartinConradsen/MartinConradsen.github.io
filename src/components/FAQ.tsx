@@ -61,7 +61,7 @@ const FAQ: React.FC = () => {
           <h3>Hvad består den ideelle negroni af?</h3>
           <p>
 			Den ideelle negroni består af lige dele gin, vermouth og
-			bitter. Den skal serveres i et passende glas med “clear ice” og
+			bitter. Den skal serveres i et passende glas med én stor klump “clear ice” og
 			pyntes med en appelsinskal. Farven skal være dyb rød, og smagen
 			skal være kompleks og afbalanceret.
 		  </p>
