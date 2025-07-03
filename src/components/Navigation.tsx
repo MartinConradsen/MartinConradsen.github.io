@@ -47,6 +47,7 @@ const Navigation: React.FC = () => {
         </button>
         <Link to="/" onClick={() => setOpen(false)}>Forside</Link>
         <Link to="/articles" onClick={() => setOpen(false)}>Vedtægter</Link>
+        <Link to="/faq" onClick={() => setOpen(false)}>FAQ</Link>
       </div>
     </nav>
   );
