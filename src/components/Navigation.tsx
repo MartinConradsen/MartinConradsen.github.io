@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">Dansk Negroni Forening</Link>
+        <Link to="/">Dansk Negroniforening</Link>
       </div>
 
       <button

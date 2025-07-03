@@ -5,11 +5,11 @@ import Navigation from './Navigation';
 const Articles: React.FC = () => {
   return (
     <><Navigation /><section className="articles">
-      <h1>Vedtægter for Dansk Negroni Forening</h1>
+      <h1>Vedtægter for Dansk Negroniforening</h1>
 
       <h2>Kapitel 1 - Navn & formål</h2>
       <h3>Foreningens navn</h3>
-      <p><strong>§ 1.</strong> Vedtægter for ‘Dansk Negroni Forening’ (DNF)</p>
+      <p><strong>§ 1.</strong> Vedtægter for ‘Dansk Negroniforening’ (DNF)</p>
       <h3>Foreningens formål</h3>
       <p><strong>§ 2.</strong> Foreningens formål er aktivt at facilitere, at foreningens medlemmer kan nyde livet, jf. § 3, nr. 2.</p>
 
@@ -149,7 +149,7 @@ const Articles: React.FC = () => {
         </ul>
 
         <h2>Kapitel 7 – Datering & ikrafttræden</h2>
-        <p><strong>§ 17.</strong> Således vedtaget på foreningens ordinære generalforsamling den 15. juli 2024, og senest ændret på den ekstraordinære generalforsamling den ______.</p>
+        <p><strong>§ 17.</strong> Således vedtaget på foreningens ordinære generalforsamling den 15. juli 2024, og senest ændret på den ekstraordinære generalforsamling den 7. juni 2025.</p>
 
     </section></>
   );

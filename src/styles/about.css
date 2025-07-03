@@ -1,0 +1,47 @@
+.negroni-figure {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.negroni-figure img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.negroni-figure figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #a9a9a9;
+}
+
+.negroni-map {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #8b0000;
+  border-radius: 12px;
+  color: #f3f3f3;
+  text-align: center;
+}
+
+.negroni-map-header {
+  color: #FFF
+}
+
+.map-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.map-link:hover {
+  transform: scale(1.02);
+}
+
+.map-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}

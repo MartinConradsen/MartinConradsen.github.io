@@ -1,3 +1,3 @@
-# Dansk Negroni Forening
+# Dansk Negroniforening
 
-En simpel hjemmeside lavet til Dansk Negroni Forening.
+En simpel hjemmeside lavet til Dansk Negroniforening.

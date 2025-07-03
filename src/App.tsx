@@ -7,7 +7,7 @@ function App() {
   return (
     <><Navigation />
     <main className="container">
-      <Header title="Dansk Negroni Forening" tagline="Må Generalen være med dig." />
+      <Header title="Dansk Negroniforening" tagline="Må Generalen være med dig." />
       <About />
       <Footer />
     </main></>
