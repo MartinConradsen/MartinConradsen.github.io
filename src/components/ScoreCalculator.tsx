@@ -13,19 +13,19 @@ const scoreColor = (score: number) => {
 };
 
 const parameters = [
-  { key: 'smag',  label: 'Smag',  weight: 1.0 },
-  { key: 'is',    label: 'Is',    weight: 0.7 },
-  { key: 'glas',  label: 'Glas',  weight: 0.4 },
-  { key: 'farve', label: 'Farve', weight: 0.5 },
-  { key: 'pynt',  label: 'Pynt',  weight: 0.3 },
-  { key: 'ekstra', label: 'Ekstra', weight: 0.1 },
+  { key: 'smag',   label: 'Smag',   weight: 1.0, min: 1,   max: 10, step: 1   },
+  { key: 'is',     label: 'Is',     weight: 0.7, min: 1,   max: 10, step: 1   },
+  { key: 'glas',   label: 'Glas',   weight: 0.4, min: 1,   max: 10, step: 1   },
+  { key: 'farve',  label: 'Farve',  weight: 0.5, min: 1,   max: 10, step: 1   },
+  { key: 'pynt',   label: 'Pynt',   weight: 0.3, min: 1,   max: 10, step: 1   },
+  { key: 'ekstra', label: 'Ekstra', weight: 0.1, min: 0,   max: 1,  step: 0.1 },
 ] as const;
 
 type ScoreKey = typeof parameters[number]['key'];
 
 const ScoreCalculator: React.FC = () => {
   const [scores, setScores] = useState<Record<ScoreKey, number>>({
-    smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 5,
+    smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 0,
   });
   const [location, setLocation] = useState('');
   const [price, setPrice] = useState('');
@@ -36,20 +36,22 @@ const ScoreCalculator: React.FC = () => {
   const weightedSum = parameters.reduce((sum, p) => sum + scores[p.key] * p.weight, 0);
   const total = Math.round((weightedSum / totalWeight) * 10) / 10;
 
-  const chartData = parameters.map(({ key, label }) => ({
-    parameter: label,
-    value: scores[key],
-    fullMark: 10,
-  }));
+  const chartData = parameters
+    .filter(({ key }) => key !== 'ekstra')
+    .map(({ key, label, min, max }) => ({
+      parameter: label,
+      value: ((scores[key] - min) / (max - min)) * 10,
+      fullMark: 10,
+    }));
 
-  const sliderBackground = (value: number) => {
-    const pct = ((value - 1) / 9) * 100;
+  const sliderBackground = (value: number, min: number, max: number) => {
+    const pct = ((value - min) / (max - min)) * 100;
     return `linear-gradient(to right, #c0392b ${pct}%, rgba(255,255,255,0.1) ${pct}%)`;
   };
 
   const handleCopy = () => {
-    const lines = parameters.map(({ key, label }) =>
-      `${label}: ${scores[key]}/10`
+    const lines = parameters.map(({ key, label, max, step }) =>
+      `${label}: ${step < 1 ? scores[key].toFixed(1) : scores[key]}/${max}`
     );
     const text = [
       location ? `📍 ${location}` : null,
@@ -93,7 +95,7 @@ const ScoreCalculator: React.FC = () => {
               />
             </div>
 
-            {parameters.map(({ key, label }) => (
+            {parameters.map(({ key, label, min, max, step }) => (
               <div key={key} className="score-parameter">
                 <div className="score-parameter-header">
                   <span className="score-parameter-name">{label}</span>
@@ -104,15 +106,16 @@ const ScoreCalculator: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.18 }}
                   >
-                    {scores[key]}
+                    {step < 1 ? scores[key].toFixed(1) : scores[key]}
                   </motion.span>
                 </div>
                 <input
                   type="range"
-                  min={1}
-                  max={10}
+                  min={min}
+                  max={max}
+                  step={step}
                   value={scores[key]}
-                  style={{ background: sliderBackground(scores[key]) }}
+                  style={{ background: sliderBackground(scores[key], min, max) }}
                   onChange={(e) =>
                     setScores((prev) => ({ ...prev, [key]: Number(e.target.value) }))
                   }
@@ -179,7 +182,7 @@ const ScoreCalculator: React.FC = () => {
             </button>
             <button
               className="score-reset"
-              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 5 }); setLocation(''); setPrice(''); setComments(''); }}
+              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 0 }); setLocation(''); setPrice(''); setComments(''); }}
             >
               Nulstil
             </button>
