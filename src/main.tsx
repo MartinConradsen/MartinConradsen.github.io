@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -11,10 +11,19 @@ import Recommendations from './components/Recommendations';
 import Navigation from './components/Navigation';
 import './styles/global.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
   return (
     <>
+      <ScrollToTop />
       <Navigation />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
