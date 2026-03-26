@@ -7,6 +7,7 @@ import Articles from './components/Articles';
 import FAQ from './components/FAQ';
 import ScoreCalculator from './components/ScoreCalculator';
 import NotFound from './components/NotFound';
+import Recommendations from './components/Recommendations';
 import Navigation from './components/Navigation';
 import './styles/global.css';
 
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/score" element={<ScoreCalculator />} />
+          <Route path="/recommendations" element={<Recommendations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

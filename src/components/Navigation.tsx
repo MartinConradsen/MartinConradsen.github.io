@@ -30,8 +30,9 @@ const Navigation: React.FC = () => {
         <div className="navbar-links">
           <NavLink to="/" end className={linkClass}>Forside</NavLink>
           <NavLink to="/articles" className={linkClass}>Vedtægter</NavLink>
-          <NavLink to="/faq" className={linkClass}>FAQ</NavLink>
           <NavLink to="/score" className={linkClass}>Bedøm</NavLink>
+          <NavLink to="/recommendations" className={linkClass}>Ingredienser</NavLink>
+          <NavLink to="/faq" className={linkClass}>FAQ</NavLink>
         </div>
 
         <button
@@ -53,8 +54,9 @@ const Navigation: React.FC = () => {
             </button>
             <NavLink to="/" end className={linkClass} onClick={() => setOpen(false)}>Forside</NavLink>
             <NavLink to="/articles" className={linkClass} onClick={() => setOpen(false)}>Vedtægter</NavLink>
-            <NavLink to="/faq" className={linkClass} onClick={() => setOpen(false)}>FAQ</NavLink>
             <NavLink to="/score" className={linkClass} onClick={() => setOpen(false)}>Bedøm</NavLink>
+            <NavLink to="/recommendations" className={linkClass} onClick={() => setOpen(false)}>Ingredienser</NavLink>
+            <NavLink to="/faq" className={linkClass} onClick={() => setOpen(false)}>FAQ</NavLink>
           </div>
         </>,
         document.body

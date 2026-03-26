@@ -1,0 +1,164 @@
+.rec {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.rec h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: #e8e8e8;
+  margin-bottom: 0.5rem;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+}
+
+.rec-subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+/* Category section */
+
+.rec-category {
+  margin-bottom: 4.5rem;
+}
+
+.rec-category-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.rec-category-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+.rec-category-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cards grid */
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 760px) {
+  .rec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 960px) {
+  .rec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card */
+
+.rec-card {
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.rec-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.rec-card-image {
+  height: 180px;
+  overflow: hidden;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.rec-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem;
+}
+
+.rec-card-placeholder {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.06);
+  user-select: none;
+  line-height: 1;
+}
+
+.rec-card-body {
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rec-card-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: #e8e8e8;
+  margin: 0 0 0.6rem;
+  font-weight: 400;
+}
+
+.rec-card-description {
+  font-size: 0.875rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.rec-card-footer {
+  padding: 0.75rem 1.25rem 1.25rem;
+}
+
+.rec-card-buy {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c0392b;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(192, 57, 43, 0.35);
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.rec-card-buy:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+  color: #fff;
+}
