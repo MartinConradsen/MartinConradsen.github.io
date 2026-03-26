@@ -1,16 +1,17 @@
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
-import Navigation from './components/Navigation';
+import PageWrapper from './components/PageWrapper';
 
 function App() {
   return (
-    <><Navigation />
-    <main className="container">
-      <Header title="Dansk Negroniforening" tagline="Må Generalen være med dig." />
-      <About />
-      <Footer />
-    </main></>
+    <PageWrapper>
+      <main className="container">
+        <Header title="Dansk Negroniforening" tagline="Må Generalen være med dig." />
+        <About />
+        <Footer />
+      </main>
+    </PageWrapper>
   );
 }
 

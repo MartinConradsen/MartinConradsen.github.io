@@ -1,47 +1,83 @@
+.about {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.about h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.5rem;
+  color: #e8e8e8;
+  font-style: italic;
+}
+
+.about p {
+  color: #aaa;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
 .negroni-figure {
-  margin-top: 2rem;
+  margin: 3rem 0;
   text-align: center;
 }
 
 .negroni-figure img {
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.7);
 }
 
 .negroni-figure figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
   font-style: italic;
-  color: #a9a9a9;
+  color: #555;
+  letter-spacing: 0.03em;
 }
 
 .negroni-map {
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: #8b0000;
-  border-radius: 12px;
-  color: #f3f3f3;
+  margin-top: 5rem;
+  padding: 3.5rem 2.5rem;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
   text-align: center;
 }
 
 .negroni-map-header {
-  color: #FFF
+  color: #e8e8e8;
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+.negroni-map p {
+  color: #888;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
 }
 
 .map-link {
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.map-link:hover {
-  transform: scale(1.02);
 }
 
 .map-caption {
-  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  background-color: #c0392b;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 0.8rem 2.25rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.map-link:hover .map-caption {
+  background-color: #e05a4e;
+  transform: translateY(-2px);
 }
