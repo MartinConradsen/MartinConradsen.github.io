@@ -65,6 +65,13 @@
   border-color: rgba(255, 255, 255, 0.22);
 }
 
+.score-comments {
+  margin-top: 1.5rem;
+  min-height: 80px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
 /* --- Sliders --- */
 
 .score-parameter {

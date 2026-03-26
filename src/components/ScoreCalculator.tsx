@@ -14,20 +14,22 @@ const scoreColor = (score: number) => {
 
 const parameters = [
   { key: 'smag',  label: 'Smag',  weight: 1.0 },
-  { key: 'is',    label: 'Is',    weight: 1.0 },
-  { key: 'glas',  label: 'Glas',  weight: 1.0 },
-  { key: 'farve', label: 'Farve', weight: 1.0 },
-  { key: 'pynt',  label: 'Pynt',  weight: 1.0 },
+  { key: 'is',    label: 'Is',    weight: 0.7 },
+  { key: 'glas',  label: 'Glas',  weight: 0.4 },
+  { key: 'farve', label: 'Farve', weight: 0.5 },
+  { key: 'pynt',  label: 'Pynt',  weight: 0.3 },
+  { key: 'ekstra', label: 'Ekstra', weight: 0.1 },
 ] as const;
 
 type ScoreKey = typeof parameters[number]['key'];
 
 const ScoreCalculator: React.FC = () => {
   const [scores, setScores] = useState<Record<ScoreKey, number>>({
-    smag: 5, is: 5, glas: 5, farve: 5, pynt: 5,
+    smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 5,
   });
   const [location, setLocation] = useState('');
   const [price, setPrice] = useState('');
+  const [comments, setComments] = useState('');
   const [copied, setCopied] = useState(false);
 
   const totalWeight = parameters.reduce((sum, p) => sum + p.weight, 0);
@@ -56,6 +58,7 @@ const ScoreCalculator: React.FC = () => {
       price ? `Pris: ${price}` : null,
       '─────────',
       `Total: ${total.toFixed(1)}/10`,
+      comments ? `\n${comments}` : null,
     ].filter(Boolean).join('\n');
 
     navigator.clipboard.writeText(text).then(() => {
@@ -116,6 +119,12 @@ const ScoreCalculator: React.FC = () => {
                 />
               </div>
             ))}
+            <textarea
+              className="score-text-input score-comments"
+              placeholder="Kommentarer (valgfrit)"
+              value={comments}
+              onChange={(e) => setComments(e.target.value)}
+            />
           </div>
 
           {/* Chart + total */}
@@ -166,11 +175,11 @@ const ScoreCalculator: React.FC = () => {
               className={`score-copy${copied ? ' copied' : ''}`}
               onClick={handleCopy}
             >
-              {copied ? '✓ Kopieret' : 'Kopier til Messenger'}
+              {copied ? '✓ Kopieret' : 'Kopier til udklipsholder'}
             </button>
             <button
               className="score-reset"
-              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5 }); setLocation(''); setPrice(''); }}
+              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 5 }); setLocation(''); setPrice(''); setComments(''); }}
             >
               Nulstil
             </button>

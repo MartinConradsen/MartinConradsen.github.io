@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && git add docs/ public/CNAME && git commit -m 'Deploy' && git push"
+    "deploy": "npm run build && cp docs/index.html docs/404.html && git add docs/ public/CNAME && git commit -m 'Deploy' && git push"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
