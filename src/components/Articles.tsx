@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/articles.css';
 import PageWrapper from './PageWrapper';
+import Footer from './Footer';
 
 const Articles: React.FC = () => {
   return (
@@ -152,6 +153,7 @@ const Articles: React.FC = () => {
           <p><strong>§ 17.</strong> Således vedtaget på foreningens ordinære generalforsamling den 15. juli 2024, og senest ændret på den ekstraordinære generalforsamling den 7. juni 2025.</p>
 
       </section>
+      <Footer />
     </PageWrapper>
   );
 };

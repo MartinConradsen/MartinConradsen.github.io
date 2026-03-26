@@ -2,7 +2,15 @@ import React, { useState } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from './PageWrapper';
+import Footer from './Footer';
 import '../styles/score.css';
+
+const scoreColor = (score: number) => {
+  if (score <= 4) return '#e74c3c';
+  if (score <= 6) return '#e67e22';
+  if (score <= 8) return '#f1c40f';
+  return '#2ecc71';
+};
 
 const parameters = [
   { key: 'smag',  label: 'Smag',  weight: 1.0 },
@@ -141,7 +149,7 @@ const ScoreCalculator: React.FC = () => {
                   <motion.span
                     key={total}
                     initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0, color: scoreColor(total) }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.18 }}
                     style={{ display: 'inline-block' }}
@@ -160,9 +168,16 @@ const ScoreCalculator: React.FC = () => {
             >
               {copied ? '✓ Kopieret' : 'Kopier til Messenger'}
             </button>
+            <button
+              className="score-reset"
+              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5 }); setLocation(''); setPrice(''); }}
+            >
+              Nulstil
+            </button>
           </div>
         </div>
       </section>
+      <Footer />
     </PageWrapper>
   );
 };

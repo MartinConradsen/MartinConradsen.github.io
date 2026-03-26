@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageWrapper from "./PageWrapper";
+import Footer from "./Footer";
 import "../styles/faq.css";
 
 const faqs = [
@@ -102,6 +103,7 @@ const FAQ: React.FC = () => {
           ))}
         </motion.div>
       </section>
+      <Footer />
     </PageWrapper>
   );
 };
