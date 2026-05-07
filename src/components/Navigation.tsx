@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { createPortal } from 'react-dom';
+import logo from '../assets/dnf_logo_transparent.png';
 import '../styles/navigation.css';
 
 const Navigation: React.FC = () => {
@@ -23,7 +24,10 @@ const Navigation: React.FC = () => {
     <>
       <nav className="navbar">
         <div className="navbar-brand">
-          <NavLink to="/" className={linkClass}>Dansk Negroniforening</NavLink>
+          <NavLink to="/" className={linkClass}>
+            <img src={logo} alt="" className="navbar-logo" />
+            <span>Dansk Negroni Forening</span>
+          </NavLink>
         </div>
 
         {/* Desktop links — inside nav for flex layout */}

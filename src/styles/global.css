@@ -50,9 +50,16 @@ a {
 
 header {
   text-align: center;
-  padding: 6rem 1.5rem 5rem;
+  padding: 2.5rem 1.5rem 5rem;
   border-bottom: 1px solid var(--border);
   margin-bottom: 4rem;
+}
+
+.header-logo {
+  display: block;
+  width: clamp(170px, 26vw, 240px);
+  height: auto;
+  margin: 0 auto 1.5rem;
 }
 
 header h1 {

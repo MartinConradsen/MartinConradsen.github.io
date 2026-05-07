@@ -11,7 +11,7 @@ const About: React.FC = () => {
           <h2>"Kender du historien bag Negroni?"</h2>
           <p>
             Dette er sandsynligvis det første spørgsmål, du vil få stillet af et
-            medlem af Dansk Negroniforening. Det er nemlig ikke bare en cocktail;
+            medlem af Dansk Negroni Forening. Det er nemlig ikke bare en cocktail;
             det er en fortælling, en tradition og en test af din værdighed.
           </p>
         </FadeIn>

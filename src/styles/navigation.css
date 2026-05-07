@@ -10,7 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 76px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand a {
@@ -20,10 +25,26 @@
   font-size: 1.1rem;
   letter-spacing: -0.01em;
   transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 0.6rem;
 }
 
 .navbar-brand a:hover {
   opacity: 0.75;
+}
+
+.navbar-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .navbar-brand a span {
+    display: none;
+  }
 }
 
 /* Desktop links */

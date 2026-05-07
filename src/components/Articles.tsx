@@ -7,11 +7,11 @@ const Articles: React.FC = () => {
   return (
     <PageWrapper>
       <section className="articles">
-        <h1>Vedtægter for Dansk Negroniforening</h1>
+        <h1>Vedtægter for Dansk Negroni Forening</h1>
 
         <h2>Kapitel 1 - Navn & formål</h2>
         <h3>Foreningens navn</h3>
-        <p><strong>§ 1.</strong> Vedtægter for 'Dansk Negroniforening' (DNF)</p>
+        <p><strong>§ 1.</strong> Vedtægter for 'Dansk Negroni Forening' (DNF)</p>
         <h3>Foreningens formål</h3>
         <p><strong>§ 2.</strong> Foreningens formål er aktivt at facilitere, at foreningens medlemmer kan nyde livet, jf. § 3, nr. 2.</p>
 

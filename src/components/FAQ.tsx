@@ -6,7 +6,7 @@ import "../styles/faq.css";
 
 const faqs = [
   {
-    q: "Hvordan bliver man medlem af Dansk Negroniforening?",
+    q: "Hvordan bliver man medlem af Dansk Negroni Forening?",
     a: "Du skal inviteres af et eksisterende medlem og derefter godkendes på generalforsamlingen. Du skal elske negroni, kunne fortælle dens historie, og som noget helt særligt: servere den perfekte negroni for alle medlemmer ved generalforsamlingen.",
   },
   {
