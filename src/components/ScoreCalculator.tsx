@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from './PageWrapper';
@@ -31,6 +31,18 @@ const ScoreCalculator: React.FC = () => {
   const [price, setPrice] = useState('');
   const [comments, setComments] = useState('');
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const blurOnScroll = () => {
+      const el = document.activeElement;
+      const isTextField =
+        (el instanceof HTMLInputElement && el.type !== 'range') ||
+        el instanceof HTMLTextAreaElement;
+      if (isTextField) (el as HTMLElement).blur();
+    };
+    window.addEventListener('touchmove', blurOnScroll, { passive: true });
+    return () => window.removeEventListener('touchmove', blurOnScroll);
+  }, []);
 
   const totalWeight = parameters.reduce((sum, p) => sum + p.weight, 0);
   const weightedSum = parameters.reduce((sum, p) => sum + scores[p.key] * p.weight, 0);
