@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from './PageWrapper';
 import Footer from './Footer';
@@ -45,7 +45,10 @@ const ScoreCalculator: React.FC = () => {
   }, []);
 
   const totalWeight = parameters.reduce((sum, p) => sum + p.weight, 0);
-  const weightedSum = parameters.reduce((sum, p) => sum + scores[p.key] * p.weight, 0);
+  const weightedSum = parameters.reduce(
+    (sum, p) => sum + (scores[p.key] / p.max) * 10 * p.weight,
+    0,
+  );
   const total = Math.round((weightedSum / totalWeight) * 10) / 10;
 
   const chartData = parameters
@@ -147,6 +150,7 @@ const ScoreCalculator: React.FC = () => {
             <ResponsiveContainer width="100%" height={260}>
               <RadarChart cx="50%" cy="50%" outerRadius="72%" data={chartData}>
                 <PolarGrid stroke="rgba(255,255,255,0.08)" radialLines={false} />
+                <PolarRadiusAxis domain={[0, 10]} ticks={[2.5, 5, 7.5, 10]} tick={false} axisLine={false} />
                 <PolarAngleAxis
                   dataKey="parameter"
                   tick={{

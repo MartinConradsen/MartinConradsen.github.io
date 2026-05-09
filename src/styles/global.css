@@ -97,6 +97,24 @@ footer {
   font-family: var(--font-sans);
 }
 
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-instagram:hover,
+.footer-instagram:focus-visible {
+  color: #c0392b;
+}
+
+.footer-instagram svg {
+  display: block;
+}
+
 /* 404 */
 .notfound {
   text-align: center;
