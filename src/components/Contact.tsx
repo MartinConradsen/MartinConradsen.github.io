@@ -11,6 +11,27 @@ const Contact: React.FC = () => {
   const [submissionState, setSubmissionState] = useState<SubmissionState>('idle');
   const [topic, setTopic] = useState('Anbefaling');
 
+  const clearValidationMessage = <
+    T extends HTMLInputElement | HTMLTextAreaElement
+  >(event: React.FormEvent<T>) => {
+    event.currentTarget.setCustomValidity('');
+  };
+
+  const showValidationMessage = <
+    T extends HTMLInputElement | HTMLTextAreaElement
+  >(event: React.InvalidEvent<T>) => {
+    const field = event.currentTarget;
+
+    if (field.validity.valueMissing) {
+      field.setCustomValidity('Udfyld venligst dette felt.');
+      return;
+    }
+
+    if (field instanceof HTMLInputElement && field.type === 'email' && field.validity.typeMismatch) {
+      field.setCustomValidity('Angiv venligst en gyldig e-mailadresse.');
+    }
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -28,7 +49,7 @@ const Contact: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Request failed');
+        throw new Error('Anmodningen mislykkedes');
       }
 
       form.reset();
@@ -54,12 +75,28 @@ const Contact: React.FC = () => {
           <div className="contact-grid">
             <label className="contact-field">
               <span>Navn</span>
-              <input type="text" name="name" autoComplete="name" maxLength={200} required />
+              <input
+                type="text"
+                name="name"
+                autoComplete="name"
+                maxLength={200}
+                required
+                onInput={clearValidationMessage}
+                onInvalid={showValidationMessage}
+              />
             </label>
 
             <label className="contact-field">
               <span>E-mail</span>
-              <input type="email" name="email" autoComplete="email" maxLength={200} required />
+              <input
+                type="email"
+                name="email"
+                autoComplete="email"
+                maxLength={200}
+                required
+                onInput={clearValidationMessage}
+                onInvalid={showValidationMessage}
+              />
             </label>
           </div>
 
@@ -97,6 +134,8 @@ const Contact: React.FC = () => {
               rows={7}
               placeholder="Fortæl os, hvad vi bør vide."
               required
+              onInput={clearValidationMessage}
+              onInvalid={showValidationMessage}
             />
           </label>
 
