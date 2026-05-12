@@ -70,7 +70,7 @@
 
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: #666;
+  color: #8f8f8f;
 }
 
 .contact-field input:focus,

@@ -24,7 +24,7 @@ const Navigation: React.FC = () => {
     <>
       <nav className="navbar">
         <div className="navbar-brand">
-          <NavLink to="/" className={linkClass}>
+          <NavLink to="/" className={linkClass} aria-label="Dansk Negroni Forening - forside">
             <img src={logo} alt="" className="navbar-logo" />
             <span>Dansk Negroni Forening</span>
           </NavLink>

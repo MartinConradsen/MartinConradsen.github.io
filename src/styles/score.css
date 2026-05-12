@@ -13,7 +13,7 @@
 }
 
 .score-subtitle {
-  color: #666;
+  color: #8f8f8f;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 }
 
 .score-text-input::placeholder {
-  color: #555;
+  color: #8f8f8f;
 }
 
 .score-text-input:focus {
@@ -169,7 +169,7 @@ input[type='range']::-moz-range-thumb {
 }
 
 .score-total-label {
-  color: #555;
+  color: #8f8f8f;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
