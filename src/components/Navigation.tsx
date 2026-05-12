@@ -37,6 +37,7 @@ const Navigation: React.FC = () => {
           <NavLink to="/score" className={linkClass}>Bedøm</NavLink>
           <NavLink to="/recommendations" className={linkClass}>Ingredienser</NavLink>
           <NavLink to="/faq" className={linkClass}>FAQ</NavLink>
+          <NavLink to="/contact" className={linkClass}>Kontakt</NavLink>
         </div>
 
         <button
@@ -61,6 +62,7 @@ const Navigation: React.FC = () => {
             <NavLink to="/score" className={linkClass} onClick={() => setOpen(false)}>Bedøm</NavLink>
             <NavLink to="/recommendations" className={linkClass} onClick={() => setOpen(false)}>Ingredienser</NavLink>
             <NavLink to="/faq" className={linkClass} onClick={() => setOpen(false)}>FAQ</NavLink>
+            <NavLink to="/contact" className={linkClass} onClick={() => setOpen(false)}>Kontakt</NavLink>
           </div>
         </>,
         document.body
