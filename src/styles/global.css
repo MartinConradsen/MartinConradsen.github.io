@@ -121,6 +121,10 @@ footer {
   font-family: var(--font-sans);
 }
 
+footer p {
+  margin: 0.25rem 0;
+}
+
 .footer-instagram {
   display: inline-flex;
   align-items: center;

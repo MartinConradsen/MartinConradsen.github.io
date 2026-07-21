@@ -27,6 +27,7 @@ const Footer: React.FC = () => {
         </svg>
       </a>
       <p>© {new Date().getFullYear()} Dansk Negroni Forening</p>
+      <p>CVR: 46643720</p>
     </footer>
   );
 };
