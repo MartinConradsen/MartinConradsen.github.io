@@ -82,7 +82,7 @@ const About: React.FC = () => (
 			<section className="home-intro">
 				<span className="home-section-label">Foreningens formål</span>
 				<p>
-					En hyldest til den klassiske Negroni – og et fællesskab for dem, der
+					En hyldest til den klassiske Negroni, og et fællesskab for dem, der
 					værdsætter balance, håndværk og kompromisløs enkelhed.
 				</p>
 			</section>
