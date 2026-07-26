@@ -1,15 +1,103 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PageWrapper from './PageWrapper';
 import Footer from './Footer';
 import '../styles/contact.css';
 
 type SubmissionState = 'idle' | 'sending' | 'success' | 'error';
 
-const endpoint = 'https://formsubmit.co/ajax/1cfb97f6f3f49709b09cc4929ba8d0ff';
+type TurnstileApi = {
+  render: (
+    container: HTMLElement,
+    options: {
+      sitekey: string;
+      action: string;
+      appearance: 'interaction-only';
+      theme: 'dark';
+      callback: (token: string) => void;
+      'expired-callback': () => void;
+      'error-callback': () => void;
+    },
+  ) => string;
+  remove: (widgetId: string) => void;
+  reset: (widgetId: string) => void;
+};
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
+const endpoint =
+  'https://dansknegroniforening.martinconradsenop.workers.dev/contact';
+const turnstileSiteKey = '0x4AAAAAAD-VrJ1F9t1keL75';
+const turnstileScriptId = 'cloudflare-turnstile-script';
 
 const Contact: React.FC = () => {
   const [submissionState, setSubmissionState] = useState<SubmissionState>('idle');
   const [topic, setTopic] = useState('Anbefaling');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const renderTurnstile = () => {
+      if (
+        cancelled ||
+        !window.turnstile ||
+        !turnstileContainerRef.current ||
+        turnstileWidgetIdRef.current
+      ) {
+        return;
+      }
+
+      turnstileWidgetIdRef.current = window.turnstile.render(
+        turnstileContainerRef.current,
+        {
+          sitekey: turnstileSiteKey,
+          action: 'contact',
+          appearance: 'interaction-only',
+          theme: 'dark',
+          callback: setTurnstileToken,
+          'expired-callback': () => setTurnstileToken(''),
+          'error-callback': () => setTurnstileToken(''),
+        },
+      );
+    };
+
+    const existingScript = document.getElementById(
+      turnstileScriptId,
+    ) as HTMLScriptElement | null;
+
+    if (existingScript) {
+      if (window.turnstile) {
+        renderTurnstile();
+      } else {
+        existingScript.addEventListener('load', renderTurnstile);
+      }
+    } else {
+      const script = document.createElement('script');
+      script.id = turnstileScriptId;
+      script.src =
+        'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.addEventListener('load', renderTurnstile);
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      cancelled = true;
+      existingScript?.removeEventListener('load', renderTurnstile);
+
+      if (turnstileWidgetIdRef.current && window.turnstile) {
+        window.turnstile.remove(turnstileWidgetIdRef.current);
+        turnstileWidgetIdRef.current = null;
+      }
+    };
+  }, []);
 
   const clearValidationMessage = <
     T extends HTMLInputElement | HTMLTextAreaElement
@@ -36,6 +124,10 @@ const Contact: React.FC = () => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get('name') ?? '').trim();
+    const email = String(formData.get('email') ?? '').trim();
+    const message = String(formData.get('message') ?? '').trim();
+    const place = String(formData.get('place') ?? '').trim();
 
     setSubmissionState('sending');
 
@@ -44,8 +136,17 @@ const Contact: React.FC = () => {
         method: 'POST',
         headers: {
           Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
-        body: formData,
+        body: JSON.stringify({
+          name,
+          email,
+          topic,
+          place,
+          message,
+          honey: String(formData.get('_honey') ?? ''),
+          turnstileToken,
+        }),
       });
 
       if (!response.ok) {
@@ -55,8 +156,18 @@ const Contact: React.FC = () => {
       form.reset();
       setTopic('Anbefaling');
       setSubmissionState('success');
+      setTurnstileToken('');
+
+      if (turnstileWidgetIdRef.current && window.turnstile) {
+        window.turnstile.reset(turnstileWidgetIdRef.current);
+      }
     } catch {
       setSubmissionState('error');
+      setTurnstileToken('');
+
+      if (turnstileWidgetIdRef.current && window.turnstile) {
+        window.turnstile.reset(turnstileWidgetIdRef.current);
+      }
     }
   };
 
@@ -69,9 +180,6 @@ const Contact: React.FC = () => {
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          <input type="hidden" name="_subject" value="Ny henvendelse fra Dansk Negroni Forening" />
-          <input type="hidden" name="_template" value="table" />
-
           <div className="contact-grid">
             <label className="contact-field">
               <span>Navn</span>
@@ -119,7 +227,7 @@ const Contact: React.FC = () => {
               <span>Lokation</span>
               <input
                 type="text"
-                name="place_recommendation"
+                name="place"
                 placeholder="Bar eller restaurant"
                 maxLength={200}
               />
@@ -144,8 +252,13 @@ const Contact: React.FC = () => {
             <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />
           </label>
 
+          <div ref={turnstileContainerRef} className="contact-turnstile" />
+
           <div className="contact-actions">
-            <button type="submit" disabled={submissionState === 'sending'}>
+            <button
+              type="submit"
+              disabled={submissionState === 'sending' || !turnstileToken}
+            >
               {submissionState === 'sending' ? 'Sender...' : 'Send besked'}
             </button>
             <p

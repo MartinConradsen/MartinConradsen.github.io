@@ -9,7 +9,7 @@ const featureLinks = [
   {
     number: '01',
     title: 'Find',
-    description: 'Gå på opdagelse i medlemmernes bedømmelser fra barer nær og fjern.',
+    description: 'Gå på opdagelse i foreningens bedømmelser fra barer nær og fjern.',
     href: 'https://www.google.com/maps/d/edit?mid=1lREHM2b36HqE5KwI3IFwFNHhMRnEg7E&usp=sharing',
     label: 'Åbn Negronikortet',
   },
@@ -108,7 +108,7 @@ const About: React.FC = () => (
 
     <FadeIn>
       <section className="home-manifesto">
-        <span className="home-section-label">Et lille manifest</span>
+        <span className="home-section-label">Vores manifest</span>
         <div className="manifesto-lines">
           <p>Vi tror på lige dele.</p>
           <p>Vi tror på klar is.</p>
@@ -153,7 +153,7 @@ const About: React.FC = () => (
           <span className="home-section-label">Negronikortet</span>
           <h2>Hvor drikker man en god Negroni?</h2>
           <p>
-            Fra København til Tokyo. Find medlemmernes bedømmelser, og se hvor
+            Fra København til Tokyo. Find foreningens bedømmelser, og se hvor
             verdens bedste cocktail bliver behandlet med den rette respekt.
           </p>
           <a
