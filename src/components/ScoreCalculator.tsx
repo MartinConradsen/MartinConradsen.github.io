@@ -3,6 +3,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { motion, AnimatePresence } from 'framer-motion';
 import PageWrapper from './PageWrapper';
 import Footer from './Footer';
+import LocationAutocomplete from './LocationAutocomplete';
 import '../styles/score.css';
 
 const scoreColor = (score: number) => {
@@ -23,12 +24,25 @@ const parameters = [
 
 type ScoreKey = typeof parameters[number]['key'];
 
+const currencies = {
+  DKK: 'kr.',
+  EUR: '€',
+  USD: '$',
+  GBP: '£',
+  JPY: '¥',
+  SEK: 'kr.',
+  NOK: 'kr.',
+} as const;
+
+type Currency = keyof typeof currencies;
+
 const ScoreCalculator: React.FC = () => {
   const [scores, setScores] = useState<Record<ScoreKey, number>>({
     smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 0,
   });
   const [location, setLocation] = useState('');
   const [price, setPrice] = useState('');
+  const [currency, setCurrency] = useState<Currency>('DKK');
   const [comments, setComments] = useState('');
   const [copied, setCopied] = useState(false);
 
@@ -72,7 +86,7 @@ const ScoreCalculator: React.FC = () => {
       location ? `📍 ${location}` : null,
       '─────────',
       ...lines,
-      price ? `Pris: ${price}` : null,
+      price ? `Pris: ${price} ${currencies[currency]}` : null,
       '─────────',
       `Total: ${total.toFixed(1)}/10`,
       comments ? `\n${comments}` : null,
@@ -94,20 +108,27 @@ const ScoreCalculator: React.FC = () => {
           {/* Sliders */}
           <div className="score-sliders">
             <div className="score-meta">
-              <input
-                className="score-text-input"
-                type="text"
-                placeholder="Lokation"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              />
-              <input
-                className="score-text-input"
-                type="text"
-                placeholder="Pris"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              />
+              <LocationAutocomplete value={location} onChange={setLocation} />
+              <div className="score-price-field">
+                <input
+                  className="score-text-input"
+                  type="text"
+                  inputMode="decimal"
+                  placeholder="Pris"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                />
+                <select
+                  className="score-currency-select"
+                  value={currency}
+                  onChange={(e) => setCurrency(e.target.value as Currency)}
+                  aria-label="Valuta"
+                >
+                  {Object.keys(currencies).map((code) => (
+                    <option key={code} value={code}>{code}</option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             {parameters.map(({ key, label, min, max, step }) => (
@@ -198,7 +219,7 @@ const ScoreCalculator: React.FC = () => {
             </button>
             <button
               className="score-reset"
-              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 0 }); setLocation(''); setPrice(''); setComments(''); }}
+              onClick={() => { setScores({ smag: 5, is: 5, glas: 5, farve: 5, pynt: 5, ekstra: 0 }); setLocation(''); setPrice(''); setCurrency('DKK'); setComments(''); }}
             >
               Nulstil
             </button>
