@@ -60,7 +60,7 @@ const About: React.FC = () => (
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Udforsk kortet
+						Udforsk negronikortet
 					</a>
 					<a
 						className="home-button home-button-secondary home-button-instagram"
@@ -147,16 +147,25 @@ const About: React.FC = () => (
 					</span>
 				</div>
 				<div className="history-copy">
-					<span className="home-section-label">Legenden fra Firenze</span>
-					<h2>En Americano var blevet for tam.</h2>
+					<span className="home-section-label">Negroniens oprindelse</span>
+					<h2>En omstridt historie. En sikker favorit.</h2>
 					<p>
-						I 1919 på Caffè Casoni bad Pascal-Olivier de Negroni bartenderen om
-						at give hans sædvanlige aperitif mere karakter. Danskvand blev
-						erstattet af gin, citronen af appelsin, og en klassiker blev født.
+						En kendt fortælling begynder i Firenze omkring 1919. Her skal grev
+						Camillo Negroni have bedt bartender Fosco Scarselli på Caffè Casoni
+						om at give hans Americano mere styrke. Scarselli erstattede
+						danskvandet med gin og citronen med appelsin, og Negronien var født.
 					</p>
 					<p>
-						En perfekt balance mellem bitterhed, sødme og styrke. Resten er, som
-						man siger, historie.
+						En anden historie fører os årtier tilbage til Saint-Louis i Senegal,
+						hvor den franske general Pascal-Olivier de Negroni gjorde tjeneste
+						fra 1855. I et bevaret brev skrev han senere til sin bror om en
+						vermouthbaseret cocktail, han havde opfundet, og som var blevet et
+						hit i officersklubben.
+					</p>
+					<p>
+						I modsætning til den store isterning i en rigtig negroni, så er
+						sandheden om oprindelsen uklar; men uanset hvilken historie der er
+						sand, skåler vi i Dansk Negroni Forening for Generalen.
 					</p>
 				</div>
 			</section>

@@ -422,6 +422,10 @@
     padding: 3rem 1.5rem;
   }
 
+  .history-copy {
+    order: -1;
+  }
+
   .history-image-wrap {
     max-width: 420px;
   }
