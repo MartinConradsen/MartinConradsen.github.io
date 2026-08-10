@@ -164,8 +164,9 @@ const About: React.FC = () => (
 					</p>
 					<p>
 						I modsætning til den store isterning i en rigtig negroni, så er
-						sandheden om oprindelsen uklar; men uanset hvilken historie der er
-						sand, skåler vi i Dansk Negroni Forening for Generalen.
+						sandheden om oprindelsen uklar. Der findes to historier: den rigtige
+						og den bedste — vi har selvfølgelig valgt den bedste. Derfor skåler vi
+						i Dansk Negroni Forening for Generalen.
 					</p>
 				</div>
 			</section>
