@@ -150,23 +150,26 @@ const About: React.FC = () => (
 					<span className="home-section-label">Negroniens oprindelse</span>
 					<h2>En omstridt historie. En sikker favorit.</h2>
 					<p>
-						En kendt fortælling begynder i Firenze omkring 1919. Her skal grev
-						Camillo Negroni have bedt bartender Fosco Scarselli på Caffè Casoni
-						om at give hans Americano mere styrke. Scarselli erstattede
-						danskvandet med gin og citronen med appelsin, og Negronien var født.
+						Den mest udbredte fortælling begynder i Firenze omkring 1919. Her
+						skal Camillo Negroni have bedt bartender Fosco Scarselli på Caffè
+						Casoni om at give hans Americano mere styrke ved at erstatte
+						danskvandet med gin. En god bestilling — og måske begyndelsen på den
+						Negroni, vi kender i dag.
 					</p>
 					<p>
-						En anden historie fører os årtier tilbage til Saint-Louis i Senegal,
-						hvor den franske general Pascal-Olivier de Negroni gjorde tjeneste
-						fra 1855. I et bevaret brev skrev han senere til sin bror om en
-						vermouthbaseret cocktail, han havde opfundet, og som var blevet et
-						hit i officersklubben.
+						Men vores foretrukne historie begynder allerede i 1857 i Saint-Louis
+						i Senegal. Her skabte den unge franske officer Pascal-Olivier de
+						Negroni en vermouthbaseret cocktail til en bryllupsfest, som senere
+						blev et stort hit i officerklubben. I et bevaret brev
+						til sin bror omtalte han selv cocktailen, han havde opfundet.
+						Pascal-Olivier steg senere i graderne og blev general — som
+						selvfølgelig beviser, at Negroni forbedrer alle aspekter af livet.
 					</p>
 					<p>
 						I modsætning til den store isterning i en rigtig negroni, så er
 						sandheden om oprindelsen uklar. Der findes to historier: den rigtige
-						og den bedste — vi har selvfølgelig valgt den bedste. Derfor skåler vi
-						i Dansk Negroni Forening for Generalen.
+						og den bedste — vi har selvfølgelig valgt den bedste. Derfor skåler
+						vi i Dansk Negroni Forening for Generalen.
 					</p>
 				</div>
 			</section>
