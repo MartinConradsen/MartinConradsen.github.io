@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import PageWrapper from './PageWrapper';
 import Footer from './Footer';
 import '../styles/contact.css';
@@ -32,10 +33,15 @@ const endpoint =
   'https://dansknegroniforening.martinconradsenop.workers.dev/contact';
 const turnstileSiteKey = '0x4AAAAAAD-VrJ1F9t1keL75';
 const turnstileScriptId = 'cloudflare-turnstile-script';
+const topics = ['Spørgsmål', 'Anbefaling', 'Negronikortet', 'Samarbejde', 'Andet'];
 
 const Contact: React.FC = () => {
+  const [searchParams] = useSearchParams();
+  const requestedTopic = searchParams.get('topic')?.trim().toLowerCase();
+  const initialTopic =
+    topics.find((option) => option.toLowerCase() === requestedTopic) ?? topics[0];
   const [submissionState, setSubmissionState] = useState<SubmissionState>('idle');
-  const [topic, setTopic] = useState('Anbefaling');
+  const [topic, setTopic] = useState(initialTopic);
   const [turnstileToken, setTurnstileToken] = useState('');
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetIdRef = useRef<string | null>(null);
@@ -154,7 +160,7 @@ const Contact: React.FC = () => {
       }
 
       form.reset();
-      setTopic('Anbefaling');
+      setTopic(initialTopic);
       setSubmissionState('success');
       setTurnstileToken('');
 
@@ -215,10 +221,9 @@ const Contact: React.FC = () => {
               value={topic}
               onChange={(event) => setTopic(event.target.value)}
             >
-              <option>Anbefaling</option>
-              <option>Spørgsmål</option>
-              <option>Samarbejde</option>
-              <option>Andet</option>
+              {topics.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
             </select>
           </label>
 

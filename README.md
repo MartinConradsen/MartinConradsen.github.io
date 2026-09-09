@@ -2,6 +2,17 @@
 
 En simpel hjemmeside lavet til Dansk Negroni Forening.
 
+## Kontaktformular
+
+Kontaktformularen vælger som standard **Spørgsmål**. Brug URL-parameteren `topic`
+til at forudvælge et emne, f.eks.
+`https://dansknegroniforening.dk/contact/?topic=Negronikortet`.
+Parameteren accepterer alle formularens emner uden at skelne mellem store og små
+bogstaver. Ukendte eller tomme værdier vælger **Spørgsmål**.
+
+Ved ændringer af emner skal `workers/contact-form.js` også deployes til
+Cloudflare, så backend accepterer de nye emner.
+
 ## Google Maps
 
 GitHub Pages bygges automatisk med GitHub Actions. Opret repository secret'en

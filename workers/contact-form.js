@@ -1,6 +1,7 @@
 const ALLOWED_TOPICS = new Set([
-  'Anbefaling',
   'Spørgsmål',
+  'Anbefaling',
+  'Negronikortet',
   'Samarbejde',
   'Andet',
 ]);
@@ -103,7 +104,7 @@ const verifyTurnstile = async (token, request, env) => {
 
 const detailRow = (label, value) => `
   <tr>
-    <td style="padding:10px 0;color:#8f8a86;font-size:13px;width:120px;vertical-align:top;">
+    <td style="padding:10px 24px 10px 0;color:#8f8a86;font-size:13px;width:120px;vertical-align:top;white-space:nowrap;">
       ${escapeHtml(label)}
     </td>
     <td style="padding:10px 0;color:#f3efeb;font-size:15px;vertical-align:top;">
@@ -113,9 +114,19 @@ const detailRow = (label, value) => `
 `;
 
 const buildEmail = ({ name, email, topic, place, message }) => {
+  const quotedMessage = [
+    '',
+    '',
+    '--- Oprindelig henvendelse ---',
+    `Fra: ${name} <${email}>`,
+    `Emne: ${topic}`,
+    ...(place ? [`Lokation: ${place}`] : []),
+    '',
+    ...message.split('\n').map((line) => `> ${line}`),
+  ].join('\n');
   const replyUrl = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(
     `Vedr. din ${topic.toLowerCase()} til Dansk Negroni Forening`,
-  )}`;
+  )}&body=${encodeURIComponent(quotedMessage)}`;
 
   return `
 <!doctype html>
