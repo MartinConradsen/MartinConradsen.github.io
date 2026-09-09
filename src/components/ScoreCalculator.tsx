@@ -101,7 +101,7 @@ const ScoreCalculator: React.FC = () => {
   return (
     <PageWrapper>
       <section className="score">
-        <h1>Bedøm din negroni</h1>
+        <h1>Bedøm din Negroni</h1>
         <p className="score-subtitle">Officiel DNF-bedømmelse · 5 parametre · vægtet gennemsnit</p>
 
         <div className="score-grid">

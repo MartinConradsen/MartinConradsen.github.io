@@ -18,7 +18,7 @@ const featureLinks = [
 		number: "02",
 		title: "Bedøm",
 		description:
-			"Giv din negroni en officiel DNF-score på smag, is, glas, farve og pynt.",
+			"Giv din Negroni en officiel DNF-score på smag, is, glas, farve og pynt.",
 		to: "/score",
 		label: "Start bedømmelsen",
 	},
@@ -48,7 +48,7 @@ const About: React.FC = () => (
 				</h1>
 				<p className="home-hero-lead">
 					Vi dokumenterer, bedømmer og forsvarer verdens bedste cocktail. Én
-					negroni ad gangen.
+					Negroni ad gangen.
 				</p>
 				<div className="home-actions">
 					<Link className="home-button home-button-primary" to="/score">

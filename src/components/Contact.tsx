@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
       <section className="contact">
         <div className="contact-heading">
           <h1>Kontakt</h1>
-          <p>Send os en anbefaling, et spørgsmål eller en god negroni-observation.</p>
+          <p>Send os en anbefaling, et spørgsmål eller en god Negroni-observation.</p>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>

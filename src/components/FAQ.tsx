@@ -7,7 +7,7 @@ import "../styles/faq.css";
 const faqs = [
   {
     q: "Hvordan bliver man medlem af Dansk Negroni Forening?",
-    a: "Du skal inviteres af et eksisterende medlem og derefter godkendes på generalforsamlingen. Du skal elske negroni, kunne fortælle dens historie, og som noget helt særligt: servere den perfekte negroni for alle medlemmer ved generalforsamlingen.",
+    a: "Du skal inviteres af et eksisterende medlem og derefter godkendes på generalforsamlingen. Du skal elske Negroni, kunne fortælle dens historie, og som noget helt særligt: servere den perfekte Negroni for alle medlemmer ved generalforsamlingen.",
   },
   {
     q: "Hvornår og hvordan afholdes generalforsamlingen?",
@@ -19,15 +19,15 @@ const faqs = [
   },
   {
     q: "Skal man bedømme alle negronier man drikker?",
-    a: "Ja! Hvis du drikker en negroni uden for dit hjem, har du som medlem af foreningen pligt til at anmelde den. Bedømmelsen sendes til foreningens SoMe-ansvarlig eller i foreningens Messenger-tråd.",
+    a: "Ja! Hvis du drikker en Negroni uden for dit hjem, har du som medlem af foreningen pligt til at anmelde den. Bedømmelsen sendes til foreningens SoMe-ansvarlig eller i foreningens Messenger-tråd.",
   },
   {
-    q: "Hvordan vurderer man en negroni?",
+    q: "Hvordan vurderer man en Negroni?",
     a: "Du vurderer efter fem parametre: smag, is, glas, farve, og pynt - hver fra 1 til 10. Derudover indeholder bedømmelsen prisen på negronien samt eventuelle andre noteværdigheder, såsom mærket på gin, vermouth og bitter.",
   },
   {
-    q: "Hvad består den ideelle negroni af?",
-    a: 'Den ideelle negroni består af lige dele gin, vermouth og bitter. Den skal serveres i et passende glas med én stor klump "clear ice" og pyntes med en appelsinskal. Farven skal være dyb rød, og smagen skal være kompleks og afbalanceret.',
+    q: "Hvad består den ideelle Negroni af?",
+    a: 'Den ideelle Negroni består af lige dele gin, vermouth og bitter. Den skal serveres i et passende glas med én stor klump "clear ice" og pyntes med en appelsinskal. Farven skal være dyb rød, og smagen skal være kompleks og afbalanceret.',
   },
   {
     q: 'Hvad er "clear ice", og hvorfor er det vigtigt?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Hvad sker der, hvis et medlem ikke lever op til standarden?",
-    a: "Medlemmer kan blive udfordret uden begrundelse. Der kan også gives sanktioner, fx hvis nogen serverer en elendig negroni. Det afgøres demokratisk og med øje for alvoren.",
+    a: "Medlemmer kan blive udfordret uden begrundelse. Der kan også gives sanktioner, fx hvis nogen serverer en elendig Negroni. Det afgøres demokratisk og med øje for alvoren.",
   },
   {
     q: "Hvordan vælger man restauranten til generalforsamlingen?",

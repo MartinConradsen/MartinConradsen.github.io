@@ -106,9 +106,9 @@ const Articles: React.FC = () => {
             <li><i>Stk. 2.</i> Kandidater kan opnå medlemskab såfremt følgende betingelser er opfyldt:</li>
             <li>
               <ul>
-                <li>a) man skal kunne lide negroni,</li>
+                <li>a) man skal kunne lide Negroni,</li>
                 <li>b) man skal kunne, subsidiært være villige til at lære, og udbrede historien om den ærede Pascal-Olivier Count de Negroni, og</li>
-                <li>c) man skal lave en negroni til samtlige medlemmer på generalforsamlingen.</li>
+                <li>c) man skal lave en Negroni til samtlige medlemmer på generalforsamlingen.</li>
               </ul>
             </li>
             <li><i>Stk. 3.</i> Bedømmelsen af betingelserne i stk. 2 sker af medlemmerne på generalforsamlingen, og afgøres med simpelt flertal og ved håndsoprækning. Ved stemmelighed har formanden den afgørende stemme.</li>
@@ -118,14 +118,14 @@ const Articles: React.FC = () => {
           <h3>Medlemskab</h3>
           <p><strong>§ 12.</strong> Medlemmer betaler et af generalforsamlingen fastsat kontingent. Kontingentet opkræves månedligt og forfalder første mandag i måneden.</p>
           <ul>
-            <li><i>Stk. 2.</i> Foreningens medlemmer har pligt til at vurdere og anmelde samtlige negroni de indtager uden for deres bopæl. Vurderingen sker i overensstemmelse med kriterierne i kapitel 5, og fremsendes til foreningens SoMe-ansvarlig eller til foreningens Messenger-tråd.</li>
+            <li><i>Stk. 2.</i> Foreningens medlemmer har pligt til at vurdere og anmelde samtlige Negroni de indtager uden for deres bopæl. Vurderingen sker i overensstemmelse med kriterierne i kapitel 5, og fremsendes til foreningens SoMe-ansvarlig eller til foreningens Messenger-tråd.</li>
             <li><i>Stk. 3.</i> Udmeldelse kan ske ved skriftlig henvendelse til et bestyrelsesmedlem med virkning for udgangen af måneden.</li>
             <li><i>Stk. 4.</i> Et medlem af foreningen kan frit udfordre andre medlemmers medlemskab. En udfordring skal ikke nærmere begrundes. Såfremt et medlems medlemskab udfordres, afgøres dennes fortsatte medlemskab af foreningens øvrige medlemmer i overensstemmelse med § 5, stk. 7. Ved stemmelighed har formanden den afgørende stemme.</li>
-            <li><i>Stk. 5.</i> Foruden stk. 3 kan medlemmer straffes, hvis et flertal af foreningens medlemmer finder dette formålstjenligt, herunder hvis medlemmet har serveret en negroni, som ikke lever op til standarden for et medlem af foreningen. Skyldsspørgsmålet samt strafudmålingen vurderes og fastsættes af de medlemmer, som ikke har deltaget i udformningen af anklagen. Ved strafudmålingen skal der tages hensyn til forseelsens karakter, således at eventuelle skærpende og formildende omstændigheder indgår i udmålingen.</li>
+            <li><i>Stk. 5.</i> Foruden stk. 3 kan medlemmer straffes, hvis et flertal af foreningens medlemmer finder dette formålstjenligt, herunder hvis medlemmet har serveret en Negroni, som ikke lever op til standarden for et medlem af foreningen. Skyldsspørgsmålet samt strafudmålingen vurderes og fastsættes af de medlemmer, som ikke har deltaget i udformningen af anklagen. Ved strafudmålingen skal der tages hensyn til forseelsens karakter, således at eventuelle skærpende og formildende omstændigheder indgår i udmålingen.</li>
           </ul>
 
-          <h2>Kapitel 5 - Bedømmelse af negroni</h2>
-          <p><strong>§ 13.</strong> Den officielle bedømmelsesform til vurdering af en negroni sker i overensstemmelse med kriterierne i dette kapitel.</p>
+          <h2>Kapitel 5 - Bedømmelse af Negroni</h2>
+          <p><strong>§ 13.</strong> Den officielle bedømmelsesform til vurdering af en Negroni sker i overensstemmelse med kriterierne i dette kapitel.</p>
           <p><strong>§ 14.</strong> De almindelige bedømmelsesparametre er følgende:</p>
           <ul>
             <li>a) is</li>
@@ -140,7 +140,7 @@ const Articles: React.FC = () => {
 
           <p><strong>§ 15.</strong> Medlemmerne foretager en samlet subjektiv vurdering ud fra bedømmelsesparametrene i § 14.</p>
           <ul>
-            <li><i>Stk. 2.</i> Foruden stk. 1 kan der tildeles ét ekstra point til den samlede subjektive vurdering, såfremt medlemmet vurderer, at den pågældende negroni indeholder noget ekstraordinært, som ikke er omfattet af de almindelige bedømmelsesparametre.</li>
+            <li><i>Stk. 2.</i> Foruden stk. 1 kan der tildeles ét ekstra point til den samlede subjektive vurdering, såfremt medlemmet vurderer, at den pågældende Negroni indeholder noget ekstraordinært, som ikke er omfattet af de almindelige bedømmelsesparametre.</li>
           </ul>
 
           <h2>Kapitel 6 - Opløsning</h2>

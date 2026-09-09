@@ -39,7 +39,7 @@ const categories: Category[] = [
       },
       {
         name: 'The Botanist',
-        description: '22 håndplukkede skotske urter og botanicals fra Islay. Delikat, blomstret og overraskende velsmagende i en negroni.',
+        description: '22 håndplukkede skotske urter og botanicals fra Islay. Delikat, blomstret og overraskende velsmagende i en Negroni.',
         buyUrl: 'https://www.pricerunner.dk/results?q=the%20botanist',
         buyLabel: 'Find på Pricerunner',
       },
@@ -57,13 +57,13 @@ const categories: Category[] = [
       },
       {
         name: 'Antica Formula',
-        description: 'Den klassiske valg. Rig på vanilje, bitter chokolade og tørret frugt - skabt til negroni.',
+        description: 'Den klassiske valg. Rig på vanilje, bitter chokolade og tørret frugt - skabt til Negroni.',
         buyUrl: 'https://www.pricerunner.dk/results?q=antica%20formula',
         buyLabel: 'Find på Pricerunner',
       },
       {
         name: 'Bordiga Rosso',
-        description: 'Italiensk vermouth med en kraftig, bitter profil og noter af urter og krydderier. Et mere robust valg for dem der ønsker en negroni med kant.',
+        description: 'Italiensk vermouth med en kraftig, bitter profil og noter af urter og krydderier. Et mere robust valg for dem der ønsker en Negroni med kant.',
         buyUrl: 'https://www.pricerunner.dk/results?q=bordiga%20rosso%20vermouth',
         buyLabel: 'Find på Pricerunner',
       },
