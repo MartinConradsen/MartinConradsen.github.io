@@ -139,43 +139,6 @@ const About: React.FC = () => (
 		</FadeIn>
 
 		<FadeIn>
-			<section className="home-history">
-				<div className="history-image-wrap">
-					<img src={negroniImage} alt="Pascal-Olivier de Negroni i uniform" />
-					<span className="history-caption">
-						Pascal-Olivier de Negroni · Generalen
-					</span>
-				</div>
-				<div className="history-copy">
-					<span className="home-section-label">Negroniens oprindelse</span>
-					<h2>En omstridt historie. En sikker favorit.</h2>
-					<p>
-						Den mest udbredte fortælling begynder i Firenze omkring 1919. Her
-						skal Camillo Negroni have bedt bartender Fosco Scarselli på Caffè
-						Casoni om at give hans Americano mere styrke ved at erstatte
-						danskvandet med gin. En god bestilling — og måske begyndelsen på den
-						Negroni, vi kender i dag.
-					</p>
-					<p>
-						Men vores foretrukne historie begynder allerede i 1857 i Saint-Louis
-						i Senegal. Her skabte den unge franske officer Pascal-Olivier de
-						Negroni en vermouthbaseret cocktail til en bryllupsfest, som senere
-						blev et stort hit i officerklubben. I et bevaret brev
-						til sin bror omtalte han selv cocktailen, han havde opfundet.
-						Pascal-Olivier steg senere i graderne og blev general — som
-						selvfølgelig beviser, at Negroni forbedrer alle aspekter af livet.
-					</p>
-					<p>
-						I modsætning til den store isterning i en rigtig negroni, så er
-						sandheden om oprindelsen uklar. Der findes to historier: den rigtige
-						og den bedste — vi har selvfølgelig valgt den bedste. Derfor skåler
-						vi i Dansk Negroni Forening for Generalen.
-					</p>
-				</div>
-			</section>
-		</FadeIn>
-
-		<FadeIn>
 			<section className="home-map">
 				<div className="map-grid" aria-hidden="true">
 					<span className="map-pin pin-one" />
@@ -199,6 +162,40 @@ const About: React.FC = () => (
 					>
 						Åbn Negronikortet
 					</a>
+				</div>
+			</section>
+		</FadeIn>
+
+		<FadeIn>
+			<section className="home-history">
+				<div className="history-image-wrap">
+					<img src={negroniImage} alt="Pascal-Olivier de Negroni i uniform" />
+					<span className="history-caption">
+						Pascal-Olivier de Negroni · Generalen
+					</span>
+				</div>
+				<div className="history-copy">
+					<span className="home-section-label">Negroniens oprindelse</span>
+					<h2>En omstridt historie. En sikker favorit.</h2>
+					<p>
+						Den mest udbredte fortælling begynder i Firenze omkring 1919, hvor
+						Camillo Negroni bad bartender Fosco Scarselli gøre sin Americano
+						stærkere ved at erstatte danskvand med gin. Måske var det begyndelsen
+						på den Negroni, vi kender i dag.
+					</p>
+					<p>
+						Vi foretrækker historien fra Saint-Louis i Senegal i 1857. Her skal
+						den franske officer Pascal-Olivier de Negroni have skabt en
+						vermouthbaseret cocktail til en bryllupsfest. Et bevaret brev til
+						hans bror omtaler opfindelsen. Senere blev Pascal-Olivier general,
+						hvilket selvfølgelig beviser, at Negroni forbedrer alle aspekter af
+						livet.
+					</p>
+					<p>
+						Sandheden er uklar, men mellem den rigtige historie og den bedste har
+						vi valgt den bedste. Derfor skåler Dansk Negroni Forening for
+						Generalen.
+					</p>
 				</div>
 			</section>
 		</FadeIn>

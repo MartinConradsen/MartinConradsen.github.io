@@ -218,6 +218,7 @@
   grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
+  margin-top: clamp(4.5rem, 8vw, 7rem);
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 5vw, 5rem);
   background: #e4ded3;
   color: #1a1917;
@@ -270,7 +271,6 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: clamp(4.5rem, 8vw, 7rem);
   padding: clamp(3rem, 6vw, 5.5rem);
   border: 1px solid var(--border);
   background: #121212;
@@ -366,13 +366,13 @@
 
   .home-history {
     gap: clamp(3rem, 5vw, 5rem);
+    margin-top: 5rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 
   .home-map {
     min-height: 500px;
-    margin-top: 5rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }

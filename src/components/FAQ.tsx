@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Hvordan vurderer man en negroni?",
-    a: "Du vurderer efter fem parametre: smag, is, glas, farve, og pynt – hver fra 1 til 10. Derudover indeholder bedømmelsen prisen på negronien samt eventuelle andre noteværdigheder, såsom mærket på gin, vermouth og bitter.",
+    a: "Du vurderer efter fem parametre: smag, is, glas, farve, og pynt - hver fra 1 til 10. Derudover indeholder bedømmelsen prisen på negronien samt eventuelle andre noteværdigheder, såsom mærket på gin, vermouth og bitter.",
   },
   {
     q: "Hvad består den ideelle negroni af?",

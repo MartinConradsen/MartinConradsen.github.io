@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
           </NavLink>
         </div>
 
-        {/* Desktop links — inside nav for flex layout */}
+        {/* Desktop links - inside nav for flex layout */}
         <div className="navbar-links">
           <NavLink to="/" end className={linkClass}>Forside</NavLink>
           <NavLink to="/articles" className={linkClass}>Vedtægter</NavLink>
@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
         </button>
       </nav>
 
-      {/* Mobile drawer — portaled to body to escape backdrop-filter containing block */}
+      {/* Mobile drawer - portaled to body to escape backdrop-filter containing block */}
       {createPortal(
         <>
           {open && <div className="navbar-overlay" onClick={() => setOpen(false)} />}

@@ -81,7 +81,7 @@
   line-height: 1;
 }
 
-/* Overlay — portaled to body */
+/* Overlay - portaled to body */
 .navbar-overlay {
   position: fixed;
   inset: 0;
@@ -91,7 +91,7 @@
   -webkit-backdrop-filter: blur(2px);
 }
 
-/* Mobile drawer — portaled to body */
+/* Mobile drawer - portaled to body */
 .navbar-drawer {
   position: fixed;
   top: 0;

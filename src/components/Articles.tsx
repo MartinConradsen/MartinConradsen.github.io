@@ -29,7 +29,7 @@ const Articles: React.FC = () => {
         <h3>Foreningens hjemsted</h3>
         <p><strong>§ 4.</strong> Foreningens hjemsted følger siddende formands adresse, indtil der eventuelt etableres en fast administration til foreningens formål.</p>
 
-        <h2>Kapitel 2 – Generalforsamling & vedtægter</h2>
+        <h2>Kapitel 2 - Generalforsamling & vedtægter</h2>
           <h3>Ordinær generalforsamling</h3>
           <p><strong>§ 5.</strong> Generalforsamlingen er foreningens højeste myndighed.</p>
           <ul>
@@ -65,7 +65,7 @@ const Articles: React.FC = () => {
           <p><strong>§ 7.</strong> Disse vedtægter kan kun ændres med mindst 2/3 flertal på en generalforsamling, hvor ændringsforslaget fremgår af dagsordenen.</p>
           <p><i>Stk. 2.</i> Vedtægtsændringer træder i kraft med virkning fra den generalforsamling, de vedtages på.</p>
 
-          <h2>Kapitel 3 – Foreningens ledelse</h2>
+          <h2>Kapitel 3 - Foreningens ledelse</h2>
           <h3>Bestyrelsen</h3>
           <p><strong>§ 8.</strong> Foreningens daglige ledelse udgøres af formanden, næstformanden, kassereren samt den SoMe-ansvarlig. Bestyrelsen vælges af generalforsamlingen for en 1-årig periode, jf. § 5, stk. 7.</p>
           <ul>
@@ -99,7 +99,7 @@ const Articles: React.FC = () => {
             <li><i>Stk. 6.</i> Den SoMe-ansvarlige har ansvar for at administrere foreningens 'Negronikort', således at kortet altid er opdateret med samtlige medlemmers anmeldelser, jf. § 12, stk. 2.</li>
           </ul>
 
-          <h2>Kapitel 4 – Medlemskab</h2>
+          <h2>Kapitel 4 - Medlemskab</h2>
           <h3>Optagelse som medlem</h3>
           <p><strong>§ 11.</strong> Kandidatur til medlemskab af foreningen kræver invitation fra mindst ét gyldigt medlem.</p>
           <ul>
@@ -124,7 +124,7 @@ const Articles: React.FC = () => {
             <li><i>Stk. 5.</i> Foruden stk. 3 kan medlemmer straffes, hvis et flertal af foreningens medlemmer finder dette formålstjenligt, herunder hvis medlemmet har serveret en negroni, som ikke lever op til standarden for et medlem af foreningen. Skyldsspørgsmålet samt strafudmålingen vurderes og fastsættes af de medlemmer, som ikke har deltaget i udformningen af anklagen. Ved strafudmålingen skal der tages hensyn til forseelsens karakter, således at eventuelle skærpende og formildende omstændigheder indgår i udmålingen.</li>
           </ul>
 
-          <h2>Kapitel 5 – Bedømmelse af negroni</h2>
+          <h2>Kapitel 5 - Bedømmelse af negroni</h2>
           <p><strong>§ 13.</strong> Den officielle bedømmelsesform til vurdering af en negroni sker i overensstemmelse med kriterierne i dette kapitel.</p>
           <p><strong>§ 14.</strong> De almindelige bedømmelsesparametre er følgende:</p>
           <ul>
@@ -143,13 +143,13 @@ const Articles: React.FC = () => {
             <li><i>Stk. 2.</i> Foruden stk. 1 kan der tildeles ét ekstra point til den samlede subjektive vurdering, såfremt medlemmet vurderer, at den pågældende negroni indeholder noget ekstraordinært, som ikke er omfattet af de almindelige bedømmelsesparametre.</li>
           </ul>
 
-          <h2>Kapitel 6 – Opløsning</h2>
+          <h2>Kapitel 6 - Opløsning</h2>
           <p><strong>§ 16.</strong> Opløsning af foreningen kan kun finde sted med 2/3 flertal på to hinanden følgende generalforsamlinger, hvor den ene skal være ordinær.</p>
           <ul>
             <li><i>Stk. 2.</i> Foreningens formue skal i tilfælde af opløsning anvendes i overensstemmelse med de i § 2 fastsatte formål. Beslutning om den konkrete anvendelse af formuen træffes af den opløsende generalforsamling.</li>
           </ul>
 
-          <h2>Kapitel 7 – Datering & ikrafttræden</h2>
+          <h2>Kapitel 7 - Datering & ikrafttræden</h2>
           <p><strong>§ 17.</strong> Således vedtaget på foreningens ordinære generalforsamling den 15. juli 2024, og senest ændret på den ekstraordinære generalforsamling den 7. juni 2025.</p>
 
       </section>
