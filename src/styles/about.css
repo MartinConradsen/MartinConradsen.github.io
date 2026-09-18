@@ -379,6 +379,22 @@
   color: var(--text-secondary);
 }
 
+.app-store-badge-link {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: #050505;
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-store-badge-link:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.app-store-badge-link:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 4px;
+}
+
 .app-store-badge svg {
   display: block;
   width: 29px;
