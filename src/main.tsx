@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import Recommendations from './components/Recommendations';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
+import AgeGate from './components/AgeGate';
 import './styles/global.css';
 
 function AnimatedRoutes() {
@@ -35,7 +36,9 @@ function AnimatedRoutes() {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <AnimatedRoutes />
+      <AgeGate>
+        <AnimatedRoutes />
+      </AgeGate>
     </BrowserRouter>
   </React.StrictMode>
 );

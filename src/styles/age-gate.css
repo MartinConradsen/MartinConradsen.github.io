@@ -1,0 +1,104 @@
+.age-gate {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.age-gate-dialog {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  overflow-y: auto;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 35%);
+}
+
+.age-gate-dialog::backdrop {
+  background: var(--bg);
+}
+
+.age-gate-brand {
+  margin: 0 0 2rem;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.age-gate-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--accent-bright);
+  border-radius: 50%;
+  color: var(--accent-bright);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.age-gate-dialog h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.age-gate-dialog h1:focus {
+  outline: none;
+}
+
+.age-gate-description {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.age-gate-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.age-gate-actions button {
+  min-height: 3rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.age-gate-primary {
+  color: #fff;
+  background: var(--accent);
+}
+
+.age-gate-primary:hover {
+  background: #a93226;
+}
+
+.age-gate-secondary {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.age-gate-secondary:hover {
+  background: var(--card);
+}
+
+.age-gate-actions button:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+
+.age-gate-note {
+  margin: 1.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
