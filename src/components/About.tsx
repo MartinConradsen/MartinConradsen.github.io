@@ -127,15 +127,19 @@ const About: React.FC = () => (
 								<strong>App Store</strong>
 							</span>
 						</a>
-						<div className="app-store-badge">
+						<a
+							className="app-store-badge app-store-badge-link"
+							href="https://play.google.com/store/apps/details?id=dk.negronikortet.app"
+							aria-label="Hent Negronikortet i Google Play"
+						>
 							<svg viewBox="0 0 24 24" aria-hidden="true">
 								<path d="M3.18 2.26a2 2 0 0 0-.18.83v17.82c0 .3.06.58.18.83l9.72-9.74-9.72-9.74Zm10.66 10.68-2.17 2.17-7.1 7.12c.3.12.64.13.97-.05l11.39-6.47-3.09-2.77ZM4.57 1.77l9.27 9.29 3.08-2.77L5.54 1.82a1.1 1.1 0 0 0-.97-.05Zm13.56 7.2-3.35 3 3.35 3.01 2.98-1.69c.8-.45.8-1.16 0-1.62l-2.98-1.7Z" />
 							</svg>
 							<span>
-								<small>Kommer snart på</small>
+								<small>Hent i</small>
 								<strong>Google Play</strong>
 							</span>
-						</div>
+						</a>
 					</div>
 				</div>
 				<div className="app-preview" aria-label="Skærmbilleder fra Negronikortet">
